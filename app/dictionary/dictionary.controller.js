@@ -42,7 +42,7 @@ angular.module('myDictionary.dictionary', ['ngRoute'])
 		 */
 		$scope.bookmarkSave = function () {
 			//$scope.wordList = localStorageService.get('bookmark');
-			//$scope.wordList.words.unshift($scope.searchText);
+			$scope.wordList.words.unshift($scope.searchText);
 			localStorageService.set('bookmark', $scope.wordList);
 			$scope.bookmarkList = localStorageService.get('bookmark');
 			$scope.bookmarkLength = $scope.bookmarkList.words.length;

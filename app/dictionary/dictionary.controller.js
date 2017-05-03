@@ -15,7 +15,7 @@ angular.module('myDictionary.dictionary', ['ngRoute'])
 			words:[]
 		};
 		$scope.bookmarkList = localStorageService.get('bookmark');
-		$scope.bookmarkLength = $scope.bookmarkList.words.length || 0;
+		$scope.bookmarkLength = ($scope.bookmarkList !== null) ? $scope.bookmarkList.words.length : 0;
 		
 		/**
 		 * @param  response{[object]}
@@ -41,8 +41,8 @@ angular.module('myDictionary.dictionary', ['ngRoute'])
 		 * for bookmark save
 		 */
 		$scope.bookmarkSave = function () {
-			$scope.wordList = localStorageService.get('bookmark');
-			$scope.wordList.words.unshift($scope.searchText);
+			//$scope.wordList = localStorageService.get('bookmark');
+			//$scope.wordList.words.unshift($scope.searchText);
 			localStorageService.set('bookmark', $scope.wordList);
 			$scope.bookmarkList = localStorageService.get('bookmark');
 			$scope.bookmarkLength = $scope.bookmarkList.words.length;

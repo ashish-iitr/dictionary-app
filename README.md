@@ -1,2 +1,2 @@
 # Dictionary-app
-A small app in angular to search a word using a public api.
+<b>Application in angular 1.0 to search a word and get meanings from the dictionary api hosted on server.</b>

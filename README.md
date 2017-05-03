@@ -4,4 +4,4 @@
 <li>npm install</li>
 <li>npm start</li>
 </ul>
-It will start server on 8000 host and open http://localhost:8000/app in the browser.
+It will start server on 8000 port and open http://localhost:8000/app in the browser.
